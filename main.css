@@ -1,0 +1,142 @@
+/* Reset padding and margins for all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Font Defaults */
+body {
+  font-size: 1.2em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Center page contents */
+.page_container {
+  width: 80%;
+  margin: auto;
+  padding:10px;
+}
+
+/* Push elements far left and right*/
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  border-bottom: 1px dotted lightgray;
+}
+
+/* Center and space h1-6 */
+h1, h2, h3, h4, h5, h6 {
+  margin: 15px 0;
+}
+
+/* styles header nav inline right */
+.header_links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* spaces the nav links */
+.header_links li {
+  padding: 0 10px;
+  list-style: none;
+}
+
+/* Enlarge main title */
+header h1 {
+  font-size:3em;
+}
+
+main {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.page_description {
+  width:80%;
+  text-align: center;
+  line-height: 1.5em;
+  margin-bottom:15px;
+}
+
+main article img {
+  width: 360px;
+  border-radius:5px;
+  margin-bottom: 25px;
+}
+
+/* main article */
+.article-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+/* main article section*/
+.article-section {
+  margin:8px 0;
+  padding-bottom: 15px;
+  background: white;
+  border-radius:5px;
+  flex-basis:20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-section p {
+  width:90%;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 1px dotted lightgray;
+  padding: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+footer li {
+  list-style-type: none;
+}
+
+.footer_mid {
+  font-size:.8em;
+  color:darkslategray;
+}
+
+/* media query for mobile */
+
+@media(max-width: 768px) {
+  /* header breaks to column layout and centers */
+  header {
+    flex-direction:column;
+    text-align:center;
+  }
+
+  main h2,
+  article > p {
+    text-align:center;
+  }
+
+  .header_links {
+    justify-content: center;
+    padding-bottom:20px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+  .footer_mid {
+    order:2;
+    margin-top: 15px;
+  }
+}
+/* end media query */
